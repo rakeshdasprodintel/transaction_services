@@ -10,17 +10,6 @@ var debug = require('debug')('express-sequelize');
 console.log('Server started with environment: ', config.env);
 
 let certObj = {};
-if(config.env === 'staging'){
-  certObj = {
-    key: fs.readFileSync('/etc/ssl/private/tradila.key'),
-    cert: fs.readFileSync('/etc/ssl/certs/tradila.crt')
-  };
-}else if(config.env === 'production'){
-  certObj = {
-    key: fs.readFileSync('/etc/ssl/private/tradila.key'),
-    cert: fs.readFileSync('/etc/ssl/certs/tradila.crt')
-  };
-}
 
 if (cluster.isMaster) {
   var cpuCount = config.env === 'production' ? require('os').cpus().length:1;
