@@ -61,7 +61,7 @@
     "http-status": "1.0.1",
     "https": "^1.0.0",
     "joi": "10.6.0",
-    "jsonwebtoken": "7.1.9",
+    "jsonwebtoken": "9.0.0",
     "method-override": "^2.3.10",
     "mysql2": "^1.7.0",
     "nodemailer": "^6.4.2",
